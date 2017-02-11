@@ -24,6 +24,7 @@ class ActorsController < ApplicationController
 
   def edit_form
     @actor = Actor.find(params[:id])
+    render('edit_form.html.erb')
   end
 
   def update_row
@@ -36,7 +37,7 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    render("show")
+    render('show')
   end
 
   def destroy
